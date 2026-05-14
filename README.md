@@ -52,7 +52,7 @@ The platform allows users to register complaints, manage their complaints, and a
 formplus/
 │
 ├── screenshots/
-│   └── homepage.png
+│   └── image.png
 │
 ├── formplus/
 │
@@ -124,7 +124,7 @@ python manage.py runserver
 
 ### Homepage
 
-![alt text](image.png)
+![alt text](screenshots/image.png)
 
 
 ---
