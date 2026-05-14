@@ -126,6 +126,25 @@ python manage.py runserver
 
 ![alt text](screenshots/image.png)
 
+---
+
+### 🔐 Login Page
+
+![Login](screenshots/login.png)
+
+---
+
+### 📝 Signup Page
+
+![Signup](screenshots/signup.png)
+
+---
+
+### 📋 Complaint Registration Form
+
+![Complaint Form](screenshots/complaint-form.png)
+
+---
 
 ---
 
