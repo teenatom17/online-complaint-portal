@@ -46,7 +46,6 @@ The platform allows users to register complaints, manage their complaints, and a
 ## 📂 Project Structure
 
 ```bash
-## 📂 Project Structure
 
 ```text id="sbgx2r"
 formplus/
