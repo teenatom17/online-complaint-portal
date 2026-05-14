@@ -1,0 +1,22 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'mainapp/styles.css' %}">
+
+<h2>Edit Complaint</h2>
+
+<form method="POST">
+  {% csrf_token %}
+
+  <label>Full Name</label>
+  {{ form.name }}
+
+  <label>Email</label>
+  {{ form.email }}
+
+  <label>Phone</label>
+  {{ form.phone }}
+
+  <label>Complaint</label>
+  {{ form.complaint_text }}
+
+  <button type="submit" class="btn-green">Update</button>
+</form>

@@ -1,0 +1,31 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'mainapp/styles.css' %}">
+
+<div class="form-container" style="width: 90%; max-width: 900px;">
+    <h2>FIR Details</h2>
+
+    <p><strong>FIR ID:</strong> {{ fir.fir_id }}</p>
+    <p><strong>Date:</strong> {{ fir.date_of_fir }}</p>
+    <p><strong>Status:</strong> {{ fir.status }}</p>
+    <p><strong>Type:</strong> {{ fir.fir_type }}</p>
+    <p><strong>Complaint Details:</strong> {{ fir.complaint_details }}</p>
+
+    <hr>
+
+    <h3>Evidence</h3>
+
+    {% if evidence %}
+        {% for ev in evidence %}
+            {% if ev.uploaded_file %}
+                <p>
+                    <a href="{{ ev.uploaded_file.url }}" download>
+                        Download Evidence ({{ ev.evidence_type }})
+                    </a>
+                </p>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <p>No evidence uploaded.</p>
+    {% endif %}
+</div>
+

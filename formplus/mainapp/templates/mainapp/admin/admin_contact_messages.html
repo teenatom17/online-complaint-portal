@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'mainapp/styless.css' %}">
+
+<div class="form-container" style="width:95%; max-width:900px;">
+    <h2>Contact Messages</h2>
+
+    {% if msgs %}
+        {% for m in msgs %}
+            <div style="padding:15px; border:1px solid #ddd; margin:10px 0; border-radius:5px;">
+                <p><strong>Name:</strong> {{ m.name }}</p>
+                <p><strong>Email:</strong> {{ m.email }}</p>
+                <p><strong>Message:</strong> {{ m.message }}</p>
+                <p><em>Submitted at: {{ m.submitted_at }}</em></p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No messages received.</p>
+    {% endif %}
+</div>

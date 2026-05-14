@@ -1,0 +1,29 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'mainapp/styles.css' %}">
+<body class="auth-page">
+
+<div class="form-box">
+  <h2>Login</h2>
+
+  <!-- NOTE: no action required here; we include a hidden 'next' field so the server always receives it -->
+  <form method="POST">
+    {% csrf_token %}
+
+    <input type="text" name="username" placeholder="Username" required>
+    <input type="password" name="password" placeholder="Password" required>
+
+    <button type="submit">Login</button>
+
+    {% if error %}
+    <p style="color:red;">{{ error }}</p>
+    {% endif %}
+  </form>
+
+
+  <p class="switch-link">
+    Don't have an account?
+    <a href="{% url 'signup' %}">Sign Up</a>
+  </p>
+</div>
+</body>
+

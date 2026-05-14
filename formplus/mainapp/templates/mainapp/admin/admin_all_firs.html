@@ -1,0 +1,32 @@
+<h2>All Complaints</h2>
+
+<table border="1" cellpadding="10">
+  <tr>
+    <th>ID</th>
+    <th>User</th>
+    <th>Complaint</th>
+    <th>Status</th>
+    <th>Update</th>
+  </tr>
+
+  {% for c in complaints %}
+  <tr>
+    <td>{{ c.id }}</td>
+    <td>{{ c.user.username }}</td>
+    <td>{{ c.complaint_text }}</td>
+    <td>{{ c.status }}</td>
+
+    <td>
+      <form method="POST" action="{% url 'update_status' c.id %}">
+        {% csrf_token %}
+        <select name="status">
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Resolved">Resolved</option>
+        </select>
+        <button type="submit">Update</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>

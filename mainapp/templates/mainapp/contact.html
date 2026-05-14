@@ -1,0 +1,26 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'mainapp/styles.css' %}">
+
+<div class="form-container">
+    <h2>Contact Admin</h2>
+
+    {% if submitted %}
+        <p class="success">Your message has been sent!</p>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Your Name:</label>
+        <input type="text" name="name" required>
+
+        <label>Your Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Your Message:</label>
+        <textarea name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
