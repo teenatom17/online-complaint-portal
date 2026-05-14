@@ -55,9 +55,8 @@ formplus/
 │   ├── homepage.png
 │   ├── login.png
 │   ├── signup.png
-│   ├── complaint-form.png
-│   └── complaint-details.png
-│
+│   └──complaint-form.png
+│  
 ├── formplus/
 │
 ├── mainapp/
