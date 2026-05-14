@@ -84,7 +84,7 @@ git clone https://github.com/teenatom17/online-complaint-portal.git
 ### 2️⃣ Navigate to Project Folder
 
 ```bash
-cd online-complaint-portal
+cd formplus
 ```
 
 ### 3️⃣ Create Virtual Environment
