@@ -48,11 +48,15 @@ The platform allows users to register complaints, manage their complaints, and a
 ```bash
 ## 📂 Project Structure
 
-```text
+```text id="sbgx2r"
 formplus/
 │
 ├── screenshots/
-│   └── image.png
+│   ├── homepage.png
+│   ├── login.png
+│   ├── signup.png
+│   ├── complaint-form.png
+│   └── complaint-details.png
 │
 ├── formplus/
 │
@@ -69,7 +73,7 @@ formplus/
 └── .gitignore
 ```
 
----
+
 
 ## ⚙️ Installation & Setup
 
